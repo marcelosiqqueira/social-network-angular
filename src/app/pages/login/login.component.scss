@@ -1,0 +1,113 @@
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: #141111;
+    .left{
+        background-image: url("../../../assets/images/streetArt2.jpg");
+        width: 50vw;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .right{
+        width: 50vw;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+        background-image: url("../../../assets/images/streetArt3.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        .login-container{
+            position: absolute;
+            width: 33vw;
+            left: 34vw;
+            background: rgb(255 255 255 / 7%);
+            box-shadow: 0 8px 32px 0 rgba(154, 238, 175, 0.37);
+            backdrop-filter: blur( 5.5px );
+            -webkit-backdrop-filter: blur( 5.5px );
+            border-radius: 10px;
+            height: 68%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #ffffff36;
+            .view{
+                
+        
+                    form{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                    h2 {
+                        font-size: 4rem;
+                        text-shadow:  3px 6px 4px rgb(51 171 60 / 60%); /* Sombra do texto */
+                        margin-bottom: 3rem;
+                    }
+                    button{
+                        width: 15rem;
+                        height: 4rem;
+                        border-radius: 10px;
+                        background: none;
+                        border: none;
+                        padding: 0;
+                        font: inherit;
+                        color: inherit;
+                        cursor: pointer;
+                        outline: inherit;
+                        text-decoration: none;
+                        font-size: 2.6rem;
+                        background-color: #ebebeb62;
+                        margin-bottom: 2rem;
+                        transition: 0.5s ease;
+                    }
+                    button:hover{
+                        font-size: 3.5rem;
+                        background-color: rgb(97, 228, 127);
+                        color: white;
+                        height: 4.5rem;
+                        width: 22rem;
+                    }
+                    .linkToRegister{
+                        color: white;
+                        font-size: 2rem;
+                        transition: 0.5s ease;
+                    }
+                    .linkToRegister:hover{
+                        font-size: 2.5rem;
+                    }
+                    .form-group{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-block: 1.5rem;
+                        margin-right: 9rem;
+                        label{
+                            width: 11.5rem;
+                            text-shadow:  3px 6px 4px rgb(51 171 60 / 60%);
+                            font-size: 2rem;
+                        }
+                        input{
+                            width: 75%;
+                            max-width: 75%;
+                            height: 3rem;
+                            box-shadow: 0 8px 32px 0 rgba(154, 238, 175, 0.37);
+                            border-radius: 10px;
+                            padding: 1rem;
+                            border: none;
+                            outline: none;
+                        }
+                        
+                    }
+                
+            }
+        }
+    }
+}

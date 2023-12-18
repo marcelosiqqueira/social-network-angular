@@ -1,0 +1,45 @@
+<div class="main">
+    <div class="left"></div>
+    <div class="right">
+        <div class="login-container">
+            <div class="view" *ngIf="view == 1">
+                <h2>Login</h2>
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="text" id="email" formControlName="email">
+              </div>
+              <div class="form-group">
+                <label for="password">Senha:</label>
+                <input type="password" id="password" formControlName="password">
+              </div>
+              <button type="submit" [disabled]="loginForm.invalid">Entrar</button>
+            </form>
+            <h2 class="linkToRegister" (click)="changeView(2)"> Não possui conta? Cadastre-se!</h2>
+            </div>
+
+            <div class="view" *ngIf="view == 2">
+                <h2 style="margin-bottom: 2rem;">Cadastro</h2>
+                <form [formGroup]="registerForm" (ngSubmit)="onRegisterSubmit()">
+                    <div class="form-group">
+                      <label for="email">Email:</label>
+                      <input type="text" id="email" formControlName="email">
+                    </div>
+                    <div class="form-group">
+                      <label for="password">Senha:</label>
+                      <input type="password" id="password" formControlName="password">
+                    </div>
+                    <mat-form-field>
+                        <mat-label>Data Nascimento</mat-label>
+                        <input matInput [matDatepicker]="picker" id="birthday" formControlName="birthday">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                      </mat-form-field>
+                    <button type="submit" [disabled]="registerForm.invalid">Cadastrar</button>
+                    <h2 class="linkToRegister" (click)="changeView(1)">Já possui conta? Faça login!</h2>
+                  </form>
+            </div>
+            
+          </div>
+    </div>
+</div>

@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 
 interface UserRegister {
   email: string;
+  name: string;
   password: string;
   birthday: string;
 }
@@ -17,18 +18,18 @@ interface UserLogin {
   providedIn: 'root'
 })
 export class UserService {
-  url = Server.URL;
+  url = Server.checkUrl();
   constructor(private http: HttpClient) { }
 
   register(userRegister: UserRegister){
-    let url = this.url + '/register'
+    let url = this.url + '/users'
 
-    this.http.post(url,userRegister);
+    return this.http.post(url,userRegister);
   }
 
   login(userLogin: UserLogin){
-    let url = this.url + '/login'
+    let url = this.url + '/auth/login'
 
-    this.http.post(url,userLogin);
+    return this.http.post(url,userLogin);
   }
 }

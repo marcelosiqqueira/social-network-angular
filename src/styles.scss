@@ -1,24 +1,27 @@
+@import 'ngx-toastr/toastr';
+
+
 * {
     margin: 0;  /*Tira os Espaços de margem*/
     padding: 0; /*Tira o preenchimento interno*/
     box-sizing: border-box; /*limita o tamanho da caixa, atua no padding, defini um tamanho fixo*/
   }
-  
-  
+
+
   :root {
     font-size: 62.5%; /* 1rem = 10px */
   }
-  
+
   html {
     scroll-behavior: smooth;
   }
-  
+
   html,
   body {
     width: 100%;
     height: 100%;
   }
-  
+
   body {
     font-family: 'DM Sans';
     font-size: 1.6rem;
